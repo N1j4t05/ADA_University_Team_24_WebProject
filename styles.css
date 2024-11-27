@@ -1,42 +1,56 @@
 :root {
-    --ada-blue: #066a01;
+    --ada-blue: white;
     --ada-red: #ae485e;
 }
 
-header { 
+p, h1, h2, li{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    width: 95%;
+    height: auto;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
     padding: 20px 20px;
     margin: 0%;
     text-align: center;
     font-family: Arial;
-    border: solid #466995;
+    border: solid none;
     width: 97%;
     z-index: -1;
-    background-image: url(./media/fa-img-2.png);
+    background-image: url(./media/ada-vertical-carousel-bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
-
+    background-size: 100% 100%;
 }
 
-#ada_logo{
+#ada_logo {
     height: 200px;
     width: 300px;
 }
 
 nav ul {
-    background-color: black;
+    background-color: #336178;
     margin: auto;
-    padding: 10px;
     text-align: center;
-    width: 99%;
+    width: 98.5%;
     margin: 0px;
+    padding: 0px 10px;
 }
 
 nav ul li {
-    background: black;
     display: inline-block;
-    border: 2px solid  black; /* #0971a5;*/
+    border: 2px solid #336178;
     align-items: center;
-    margin: 10px ;
+    margin: 0px;
+    margin-right: 10px;
 }
 
 nav ul li a {
@@ -44,26 +58,48 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 20px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .Welcome h1 {
-    font-size: 40px;
-    color: white;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 60px;
-}
-
-.Welcome p {
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--ada-blue);
     margin: 0px;
+    background-attachment: scroll;
+    text-align: center;
+    align-items: center;
 }
+
+body .Title {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+body .Title #style {
+    font-size: 25px;
+}
+
+body .Title ul li {
+    border: 2px solid white;
+    align-items: center;
+    margin: 10px;
+}
+
+footer {
+    background-color: #336178;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
