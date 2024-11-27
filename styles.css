@@ -1,8 +1,69 @@
 :root {
-    --ada-blue: #336178;
+    --ada-blue: #066a01;
     --ada-red: #ae485e;
+}
+
+header { 
+    padding: 20px 20px;
+    margin: 0%;
+    text-align: center;
+    font-family: Arial;
+    border: solid #466995;
+    width: 97%;
+    z-index: -1;
+    background-image: url(./media/fa-img-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+#ada_logo{
+    height: 200px;
+    width: 300px;
+}
+
+nav ul {
+    background-color: black;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 99%;
+    margin: 0px;
+}
+
+nav ul li {
+    background: black;
+    display: inline-block;
+    border: 2px solid  black; /* #0971a5;*/
+    align-items: center;
+    margin: 10px ;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.Welcome h1 {
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 60px;
+}
+
+.Welcome p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: var(--ada-blue);
+    margin: 0px;
 }
