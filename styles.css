@@ -6,12 +6,18 @@
 p, h1, h2, li{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    border: 1ch;
 }
 
 p {
     width: 95%;
     height: auto;
     margin: 20px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
 }
 
 ul {
@@ -63,10 +69,10 @@ nav ul li a {
 
 .Welcome h1 {
     font-size: 50px;
-    color: rgb(0, 0, 0);
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 60px;
+    margin: 30px;
     box-sizing: border-box;
 }
 
@@ -80,11 +86,12 @@ body {
 
 body .Title {
     color: rgb(0, 0, 0);
-    font-size: 40px;
+    font-size: 30px;
+    padding: 20px;
 }
 
 body .Title #style {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 body .Title ul li {
@@ -99,7 +106,20 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
 }
 
+.social-link {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 10vh;
+    gap: 10px; 
+    text-align: center;
+  }
+  
+  .social-icon {
+    width: 30px; 
+    height: auto;
+  }

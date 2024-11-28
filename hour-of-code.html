@@ -36,25 +36,63 @@
                 show that anyone can learn the basics, encouraging future interest in computer science.
             </p>
         </div>
-    </div>
-
-    <div class="Title">
         <p><b>Hour of Code Event</b></p>
         <div id="style">
-            <video width="640" height="360" controls autoplay>
+            <video width="640" height="360" controls style="border: 1px solid black; border-radius: 2px;">
+                <!-- autoplay -->
                 <source src="./media/Hour Of Code.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <p style="font-size: 20px; font-style: italic;">
+                Video from Hour of Code in collaboration with Target High School
+            </p>
+            <p id="info" style="font-size: 20px; font-style: italic; border: 1ch;">
+                Before this event, we partnered with "Hedef" Lyceum to host our Hour of Code session. They generously
+                provided us with a classroom and 20 enthusiastic children eager to learn. We kicked off the event with
+                an inspiring video to spark their curiosity about coding. Following that, we introduced them to
+                <a href="https://studio.code.org/s/courseb-2024/lessons/4/levels/1"
+                    style="display: inline;"><b>Programming with Angry Birds</b></a> on
+                Code.org, explaining the tasks step by step. The children then eagerly
+                dove into the challenges, solving them with creativity and determination. It was an exciting and unique
+                experience, filled with energy, curiosity, and a sense of accomplishment for everyone involved.
+            </p>
+            <!--Javascript for change image automatically-->
+            <script>
+                let slideshowImages = ["./media/Hour of code/Image1.jpg", "./media/Hour of code/Image2.jpg", "./media/Hour of code/Image3.jpg", "./media/Hour of code/Image4.jpg"];
+                let slideshowIndex = 0;
+
+                function startSlideshow() {
+                    setInterval(() => {
+                        slideshowIndex = (slideshowIndex + 1) % slideshowImages.length;
+                        document.getElementById("slideshow-image").src = slideshowImages[slideshowIndex];
+                    }, 5000);
+                }
+
+                window.onload = startSlideshow;
+            </script>
+            <div id="slideshow">
+                <img src="./media/Hour of code/HourOfCode.jpg" alt="Slideshow Image" id="slideshow-image"
+                    style="width:600px; height: auto; border-radius: 5%; ">
+            </div>
+            <p><i>"Hedef" Lyceum 6th grade</i></p>
+
         </div>
-    </div>
-
-    <div>
-
+        <p><b>Organize an Hour of Code</b></p>
+        <div id="style">
+            <p id="info" style="font-size: 20px; font-style: italic; border: 1ch;">
+                Join us for Hour of Code event, where you’ll explore the exciting world of programming in a fun and
+                beginner-friendly environment! Whether you're new to coding or curious about technology, this event
+                offers a hands-on introduction to building games, solving puzzles, and creating simple programs. With
+                interactive tutorials and support from our team, you’ll discover just how empowering and enjoyable
+                coding can be—all in just one hour. Let’s code together and spark your creativity!
+                <a href="https://hourofcode.com/az"><b>Hour Of Code</b></a>
+            </p>
+        </div>
     </div>
 </body>
 
 <footer>
-    <p>&copy; 2024 Our Team. All Rights Reserved.</p>
+    <p>&copy; 2024 Team 24. All Rights Reserved.</p>
 </footer>
 
 </html>
