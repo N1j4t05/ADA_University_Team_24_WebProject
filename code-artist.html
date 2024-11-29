@@ -5,27 +5,103 @@
     Submitted in partial fulfillment of the requirements of the course.
 -->
 <html>
-    <head>
-        <title>Homework 3: Programming art</title>
-        <link rel="stylesheet" href="styles.css">  
-        <script type="text/javascript" src="scripts.js"></script>      
-    </head>
-    <body>
-        
-        <div style="text-align:center">
-            <canvas id="art-canvas" width="640" height="480">
-                Sorry ... your browser doesn't support the HTML5 canvas element.
-            </canvas>        
-        </div>          
 
-        <script type="text/javascript">
-            // Get reference to the 2D context of the canvas
-            let canvas = document.getElementById("art-canvas");
-            let context = canvas.getContext("2d");
-            // Set the color for drawing lines using red, green and blue components
-            // context.strokeStyle = 'rgb(255, 0, 0)';
-            context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+<head>
+    <title>Homework 3: Programming art</title>
+    <link rel="icon" type="image/png" href="./media/Team_24_logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<header id="Common_header">
+    <img src="media/ada_logo_color.png" alt="ADA Color" id="ada_logo">
+</header>
+
+<body>
+    <!-- Navigation part -->
+    <nav id="navigation">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./team-members.html">Team Members</a></li>
+            <li><a href="./hour-of-code.html">Hour of Code Event</a></li>
+            <li><a href="./web-project.html">Website Project</a></li>
+            <li><a href="./code-artist.html">Code Art</a></li>
+        </ul>
+    </nav>
+    <table>
+        <tr>
+            <th>
+                <p style="text-align: center; font-size: 30px;">
+                    Team 24 Code Art
+                </p>
+            </th>
+            <th>
+                <p style="text-align: center; font-size: 30px;">
+                    Code Explanation
+                </p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: left; margin: 20px 20px;">
+                    <canvas id="art-canvas" width="640" height="480">
+                        Sorry ... your browser doesn't support the HTML5 canvas element.
+                    </canvas>
+                </div>
+            </td>
+            <td>
+                <p style="border: 1ch; font-size: 22px; ">
+                    Code creates a dynamic, colorful animation of a spiral using the HTML5 "canvas" element and
+                    JavaScript. The DrawSpiral function is responsible for drawing the spiral by calculating and
+                    updating the x, y coordinates of the line segments based on trigonometric functions and the
+                    current angle, which changes as the spiral is drawn. The moveForward, turnRight, and turnLeft
+                    functions handle the movement and rotation logic for drawing the spiral, while radian converts
+                    degrees to radians for accurate trigonometric calculations. The animation function ensures that
+                    the canvas is cleared before each frame, dynamically updates the color of the spiral using the
+                    HSL color model (hue changes between 0 and 360 to create a continuous spectrum of colors), and
+                    repeatedly calls itself using requestAnimationFrame for smooth animation. Together, these
+                    functions produce a mesmerizing animated spiral with continuously changing colors at the center
+                    of the canvas.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        // Get reference to the 2D context of the canvas
+        let canvas = document.getElementById("art-canvas");
+        let context = canvas.getContext("2d");
+        // Set the color for drawing lines using red, green and blue components
+        // context.strokeStyle = 'rgb(255, 0, 0)';
+
+        let hue = 0; // Initialize the hue variable to control the color dynamically
+
+        function animation() {
+            // Clear the entire canvas to avoid overlapping drawings from previous frames
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Set the stroke color dynamically using the HSL color model, where the hue value changes
+            context.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+            // Call the DrawSpiral function to draw the spiral shape on the canvas
             DrawSpiral(context);
-        </script>
-    </body>
+
+            hue += 1;
+
+            // Reset the hue value to 0 once it exceeds 360, creating a loop of the color spectrum
+            if (hue > 360) hue = 0;
+
+            // Request the next animation frame and call the animation function again
+            requestAnimationFrame(animation);
+        }
+        animation();
+
+    </script>
+
+</body>
+
+<footer>
+    <p>&copy; 2024 Team 24. All Rights Reserved.</p>
+</footer>
+
+
 </html>

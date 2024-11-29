@@ -3,7 +3,10 @@
     --ada-red: #ae485e;
 }
 
-p, h1, h2, li{
+p,
+h1,
+h2,
+li {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     border: 1ch;
@@ -24,13 +27,13 @@ ul {
     list-style-type: none;
 }
 
-header {
+#Common_header {
     padding: 20px 20px;
     margin: 0%;
     text-align: center;
     font-family: Arial;
     border: solid none;
-    width: 97%;
+    width: 97.5%;
     z-index: -1;
     background-image: url(./media/ada-vertical-carousel-bg.jpg);
     background-repeat: no-repeat;
@@ -46,7 +49,7 @@ nav ul {
     background-color: #336178;
     margin: auto;
     text-align: center;
-    width: 98.5%;
+    width: 98.6%;
     margin: 0px;
     padding: 0px 10px;
 }
@@ -111,15 +114,15 @@ footer {
 }
 
 .social-link {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 10vh;
-    gap: 10px; 
+    gap: 10px;
     text-align: center;
-  }
-  
-  .social-icon {
-    width: 30px; 
+}
+
+.social-icon {
+    width: 30px;
     height: auto;
-  }
+}
